@@ -3,7 +3,7 @@ import { User } from "../entities/User";
 export const users: User[] = [
     {
         username: "Ahmed",
-        password: "Ahemd",
+        password: "Ahmed",
         token: {
             id: "353454354354353453",
             expiresIn: 1504699256
@@ -11,7 +11,7 @@ export const users: User[] = [
     },
     {
         username: "Ahmed2",
-        password: "Ahemd2",
+        password: "Ahmed2",
         token: {
             id: "353454354354353453",
             expiresIn: 1504699256
@@ -19,7 +19,7 @@ export const users: User[] = [
     },
     {
         username: "Ahmed3",
-        password: "Ahemd3",
+        password: "Ahmed3",
         token: {
             id: "353454354354353453",
             expiresIn: 1504699256

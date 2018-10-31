@@ -1,11 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { LoginPageComponent } from './directives/authentication-page/login-page.component';
 import { AuthenticationRoutingModule } from './authentication-routing.module';
 import { RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { AuthService } from '../services/AuthService';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
+import { AuthService } from './services/AuthService';
+import { AuthInterceptor } from './services/AuthInterceptor';
+import { LoginPageComponent } from './components/authentication-page/login-page.component';
 
 @NgModule({
   imports: [
@@ -17,7 +18,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     HttpClientModule
   ],
   declarations: [LoginPageComponent],
-  providers: [AuthService],
+  providers: [AuthService, AuthInterceptor],
   exports: [AuthenticationRoutingModule]
 })
 export class AuthenticationModule { }

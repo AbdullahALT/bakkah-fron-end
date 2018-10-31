@@ -11,8 +11,10 @@ class Authentication {
         const observe = new Observable<Token>((observer) => {
             setTimeout(() => {
                 for(let user of users){
-                    if(user.username == username && user.password == password)
+                    if(user.username === username && user.password === password){
                         observer.next(user.token);
+                        return;
+                    }
                 }
                 observer.error("No user found :(")
             }, 1000)
