@@ -7,10 +7,11 @@ import { HttpClientModule } from '@angular/common/http';
 import { AuthService } from './services/AuthService';
 import { AuthInterceptor } from './services/AuthInterceptor';
 import { LoginPageComponent } from './components/authentication-page/login-page.component';
+import { AppCommonModule } from '../common/app-common.module';
 
 @NgModule({
   imports: [
-    CommonModule,
+    AppCommonModule,
     FormsModule,
     ReactiveFormsModule,
     RouterModule,

@@ -11,6 +11,11 @@ import { BrowserModule } from '@angular/platform-browser';
     BrowserAnimationsModule,
     MaterialModule
   ],
-  exports: [BrowserModule]
+  exports: [
+    BrowserModule,
+    CommonModule, 
+    BrowserAnimationsModule,
+    MaterialModule
+  ]
 })
 export class AppCommonModule { }
